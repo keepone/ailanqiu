@@ -1,0 +1,115 @@
+/* v1.0 | 2014-3-12
+	@author great.maronghua@gmail.com
+   License: none (public domain)
+*/
+body { background: #1F253D; background-size: 100%; }
+.wrapper { }
+.xcontrol-login-wrapper, .xcontrol-wrapper { border: 0px solid #fff; padding: 35px; border-radius: 8px; background: #394264; box-shadow: 0px 0px 0px 0px #000; }
+.xcontrol-login-wrapper .login-title, .xcontrol-wrapper .title { font-size: 34px; color: #fff; margin-bottom: 40px; font-weight: bold; }
+.xcontrol-login-wrapper .input-div { display: block; margin-bottom: 30px; background: transparent url('../images/icon-xcontrol-login-user.png') no-repeat 20px center; border: 0; height: 50px; line-height: 50px; padding: 20px 0; width: 100%; border-radius: 8px; border: 1px solid #fff; }
+.xcontrol-login-wrapper .input-div input { padding: 0; margin: 0; width: 95%; border: 0; background: transparent; height: 50px; line-height: 50px; font-size: 30px; color: #A7C8DF; }
+.xcontrol-login-wrapper .input-password-div { background-image: url('../images/icon-xcontrol-login-password.png'); }
+.xcontrol-login-wrapper .input-div-background-fix { background: #fff; opacity: 0.15; position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 1; border-radius: 8px; }
+.xcontrol-login-wrapper .input-div-fix { margin-left: 90px; text-align: left; position: relative; z-index: 9; }
+.shape-white-botton { display: inline-block; width: 100%; height: 80px; line-height: 80px; color: #01B1AF; font-size: 32px; border: 0; border: 1px solid #fff; background: #fff; border-radius: 5px; text-align: center; font-weight: bold; }
+.xcontrol-login-bottom { margin: 35px; }
+.xcontrol-login-bottom a { font-size: 30px; color: #fff; }
+
+.xcontrol-wrapper .title { padding: 35px 0 35px 0; margin-bottom: 0; line-height: 35px; font-weight: bold; }
+.xcontrol-status-wrapper { margin-bottom: 35px; padding: 0; }
+.xcontrol-status-fixed-wrapper { background: none; box-shadow: none; }
+.xcontrol-switch-wrapper { font-size: 34px; color: #fff; }
+.xcontrol-switch-wrapper .xcontrol-switch { height: 115px; line-height: 115px; border-top: 1px solid #242B45; }
+.xcontrol-switch-wrapper .xcontrol-switch .switch, .xcontrol-switch-wrapper .xcontrol-switch .switch-background { right: 20px; top: 35px; height: 44px; width: 83px; cursor: pointer; }
+.xcontrol-switch-wrapper .xcontrol-switch .switch-background { background: url('../images/xcontrol/xcontrol-switch-bg.png') no-repeat; }
+.xcontrol-switch-wrapper .xcontrol-switch .switch { top: 0; right: 0; background: url('../images/xcontrol/xcontrol-switch.png') no-repeat 4px 3px; }
+.xcontrol-switch-wrapper .xcontrol-switch.off .switch { background-position: 5px -229px; }
+
+
+.xcontrol-switch-wrapper .xcontrol-button { width: 23%; height: 70px; padding: 100px 0 0 0; line-height: 70px; background: transparent url('../images/icon-xcontrol-guoshu.png') no-repeat center 28px; border-radius: 0 0 5px 5px; cursor: pointer; }
+.xcontrol-switch-wrapper .xcontrol-button.on { background-color: #00E0CE; }
+.xcontrol-switch-wrapper .xcontrol-button .xcontrol-button-background-fix { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 0 0 5px 5px; background: #fff; opacity: 0.17; }
+.xcontrol-switch-wrapper .button1 { border-top: 10px solid #F24F69; }
+.xcontrol-switch-wrapper .button2 { border-top: 10px solid #00E0CE; }
+.xcontrol-switch-wrapper .button3 { border-top: 10px solid #FCB150; }
+.xcontrol-switch-wrapper .button4 { border-top: 10px solid #4FC4F6; }
+.xcontrol-switch-wrapper .button1.on { background-color: #cd364e; }
+.xcontrol-switch-wrapper .button2.on { background-color: #00bdae; }
+.xcontrol-switch-wrapper .button3.on { background-color: #e9901d; }
+.xcontrol-switch-wrapper .button4.on { background-color: #1ea0d8; }
+
+.xcontrol-space-buttons .xcontrol-button { height: 101px; line-height: 101px; }
+.xcontrol-space-buttons .fix { height: 101px; margin-bottom: 35px; }
+.xcontrol-space-buttons .space-rechange-switch { top: 0; left: 50%; width: 101px; height: 101px; margin-left: -50px; background: url('../images/xcontrol/xcontrol-space-switch-rechange.png') no-repeat center; cursor: pointer; }
+.xcontrol-space-buttons .xcontrol-button .xcontrol-button-background-fix { border-radius: 5px; }
+.xcontrol-space-buttons .button1, .xcontrol-space-buttons .button2, .xcontrol-space-buttons .button3, .xcontrol-space-buttons .button4 { border: 0; border-radius: 5px; }
+.xcontrol-space-buttons .button1.on { background-color: #00E0CE; }
+.xcontrol-space-buttons .button2.on { background-color: #4FC4F6; }
+.xcontrol-space-buttons .button3.on { background-color: #4FC4F6; }
+.xcontrol-space-buttons .button4.on { background-color: #00E0CE; }
+
+.xcontrol-zhinengkaiguan-wrapper .xcontrol-switch { background: url('../images/xcontrol/xcontrol-temperature-icons.png') no-repeat 40px 35px; padding-left: 110px; }
+.xcontrol-zhinengkaiguan-wrapper .switch2 { background-position: 40px -80px; }
+.xcontrol-zhinengkaiguan-wrapper .switch3 { background-position: 40px -200px; }
+.xcontrol-zhinengkaiguan-wrapper .switch4 { background-position: 40px -318px; }
+
+.xcontrol-switch-wrapper .guoshu { background-image: url('../images/icon-xcontrol-guoshu.png'); }
+.xcontrol-switch-wrapper .bingzhen { background-image: url('../images/icon-xcontrol-bingzhen.png'); }
+.xcontrol-switch-wrapper .baoxian { background-image: url('../images/icon-xcontrol-baoxian.png'); }
+.xcontrol-switch-wrapper .yuxian { background-image: url('../images/icon-xcontrol-yuxian.png'); }
+.xcontrol-switch-wrapper .chaye { background-image: url('../images/icon-xcontrol-chaye.png'); }
+
+.xcontrol-switch-wrapper .button-margin-right { margin-right: 11px; }
+.xcontrol-switch-wrapper .xcontrol-space-button { width: 50%; padding: 0; margin: 0; background-image: none; }
+
+
+.xcontrol-switch-wrapper .xcontrol-lable { height: 52px; line-height: 52px; margin: 0 35px 0 35px; padding: 0 0 0 60px; background: url('../images/xcontrol/xcontrol-temperature-text-icons.png') no-repeat 0px 0px; }
+.xcontrol-switch-wrapper .xcontrol-lable2 { background-position: 0px -141px; }
+.temperature-text { font-size: 22px; }
+.xcontrol-progress-box { display: block; height: 40px; margin: 0 35px 0 35px; padding: 18px 0; }
+.xcontrol-progress-box .line { width: 100%; height: 40px; line-height: 0; overflow: hidden; background: #fff; opacity: 0.12; border-radius: 10px; }
+.xcontrol-progress-box .circle { top: 18px; left: 0; width: 40px; height: 40px; background: #10B5FF; border-radius: 10px; }
+
+.border-circle { margin: 40px auto; width: 300px; height: 300px; background: #FA0167; border-radius: 50%; overflow: hidden; }
+.inner-circle { top: 10px; left: 10px; width: 280px; height: 280px; background: #4941A8; border-radius: 50%; }
+.inner-circle span { font-size: 80px; line-height: 280px; color: #fff; font-weight: lighter; }
+.border-white-circle { top: -1px; left: -1px; background: #fff; width: 302px; height: 302px; }
+
+.xcontrol-guard-wrapper { margin-bottom: 35px; }
+.xcontrol-guard-wrapper .title { font-size: 32px; padding: 0 0 20px 0; }
+.xcontrol-wrapper .title-time { font-size: 20px; }
+.xcontrol-wrapper-tips { margin: 0 5px; padding-top: 20px; font-size: 25px; line-height: 32px; color: #fff; border-top: 1px solid #242B45; }
+.xcontrol-clear-button { border: 2px solid #fff; width: auto; display: block; margin: 35px auto; }
+.xcontrol-clear-button.disable { opacity: 0.2; }
+.headlth-guard-circle { width: 380px; height: 380px; margin: 0 auto; }
+.headlth-guard-circle .inner-circle { width: 330px; height: 330px; top: 25px; left: 25px; color: #fff; }
+.xcontrol-button-wrapper .disable { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; background: #fff; opacity: 0.75; }
+
+.headlth-log-circle { width: 200px; height: 200px; padding: 0; margin: 0; }
+.headlth-log-circle .inner-circle { width: 180px; height: 180px; top: 10px; left: 10px; background: #4498D8; }
+
+.xcontrol-progress-box1 { width: 100%; height: 50px; margin: 45px 0 0 0; }
+.xcontrol-progress-box1 .line { width: 100%; height: 2px; line-height: 0; overflow: hidden; background: #fff; }
+.xcontrol-progress-box1 .circle { top: -20px; left: 0; width: 42px; height: 42px; background: #fff; border-radius: 50%; }
+
+.xcontrol-progress-box2 { width: 100%; height: 50px; margin: 45px 0 0 0; }
+.xcontrol-progress-box2 .line { width: 100%; height: 2px; line-height: 0; overflow: hidden; background: #fff; }
+.xcontrol-progress-box2 .circle { top: -20px; left: 0; width: 42px; height: 42px; background: #fff; border-radius: 50%; }
+
+/** 2014-3-14 淇敼 */
+/** 2014-3-14 淇敼 */
+.shape-xcontrol-botton { background: #00EAFF; color: #293E94; border: 0; font-weight: bold; }
+.xcontrol-download {background: transparent url('../images/xcontrol/download.png') no-repeat; width: 640px; height: 150px;}
+
+/** 设备管理 */
+.xcontrol-devices-wrapper { padding: 44px; border-radius: 8px; background: #3469AF; box-shadow: 0px 0px 0px 0px #000; min-height: 800px; }
+.xcontrol-devices-wrapper .manage-title { height: 85px; line-height: 85px; margin: -44px -44px 0 -44px; background: #1A4F95; border-radius: 8px 8px 0 0; border-bottom: 1px solid #8CB3DB; padding: 0 44px; color: #fff; font-size: 24px; }
+.xcontrol-devices-wrapper .manage-title .manage { float: right; color: #fff; background: url('../images/xcontrol/xcontrol-device-manage-title-settings.png') no-repeat left center; padding-left: 35px; }
+.xcontrol-devices-wrapper .manage-title .welcome { background: url('../images/xcontrol/xcontrol-device-manage-title-flow.png') no-repeat left center; padding-left: 28px; }
+.xcontrol-devices-wrapper .device-title, .xcontrol-devices-wrapper .device-item, .xcontrol-devices-wrapper .device-tips { color: #fff; font-size: 30px; margin: 25px 0; }
+.xcontrol-devices-wrapper .device-title { margin: 80px 0 20px 0; font-size: 34px; }
+.xcontrol-devices-wrapper .device-tips { color: #8EDDFF; font-size: 26px; margin: 0; }
+.xcontrol-devices-wrapper .device-item { border: 2px solid #fff; height: 88px; line-height: 88px; border-radius: 8px; }
+.xcontrol-devices-wrapper .device-item.x { /* background-image: url('../images/xcontrol/xcontrol-device-manage-icon-x.png'); */ background-repeat: no-repeat; background-position: 97% center; }
+.xcontrol-devices-wrapper .device-item:hover, .xcontrol-devices-wrapper .device-item.curr { background-color: #28A9E0; border-color: #4DC3F6; cursor: pointer; }
+.xcontrol-devices-wrapper .button { color: #fff; background: #164583; border: 0; height: 88px; line-height: 88px; margin-top: 100px; }

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+		/WEB-INF/spring/applicationContext.xml
+		<!-- ,
+		/WEB-INF/spring/exam_security.xml
+		 --></param-value>
+	</context-param>
+
+	
+	 <!-- 加载log4j的配置文件 -->
+	 <context-param>
+	  <param-name>log4jConfigLocation</param-name>
+	  <param-value>/WEB-INF/log4j/log4j.properties</param-value>
+	 </context-param>
+		 <!-- 设置log4j存放Log文件位置（通过spring统一进行管理） -->
+	  <context-param>  
+        <param-name>webAppRootKey</param-name>  
+        <param-value>webapp.root2</param-value>  
+    </context-param>  
+	 <!--Spring默认刷新Log4j配置文件的间隔,单位为millisecond--><!--
+	 <context-param>
+	  <param-name>log4jRefreshInterval</param-name>
+	  <param-value>60000</param-value>
+	 </context-param>
+	
+	 --><!--Spring用于log4j初始化的监听器
+	  Spring通过org.springframework.web.util.WebAppRootListener 这个监听器来运行时的项目路径。
+	     但是如果在web.xml中已经配置了 org.springframework.web.util.Log4jConfigListener这个监听器，
+	     则不需要配置WebAppRootListener了。因为Log4jConfigListener已经包含了WebAppRootListener的功能-->
+	 <listener>
+	  <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	 </listener>
+ 
+ <!-- 配置Java Xss保护过滤器 -->
+  <filter>
+    <filter-name>xssFilter</filter-name>
+    <filter-class>com.filter.util.XssFilter</filter-class>
+</filter>
+<filter-mapping>
+    <filter-name>xssFilter</filter-name>
+    	<url-pattern>/*</url-pattern>
+  	<dispatcher>REQUEST </dispatcher>
+<dispatcher>FORWARD </dispatcher>
+ <dispatcher>INCLUDE </dispatcher> 
+</filter-mapping> 
+ 
+ 
+ 
+	<!-- 对403和404异常进行处理 -->
+	<error-page>  
+		  <exception-type>AccessDeniedException</exception-type>  
+		  <location>/jsp/deny.jsp</location>  
+	 </error-page>  
+	 <error-page>  
+	        <error-code>403</error-code>  
+	        <location>/jsp/deny.jsp</location>  
+	</error-page>  
+	 <error-page>  
+	        <error-code>404</error-code>  
+	        <location>/jsp/404.jsp</location>  
+	</error-page>
+	
+	<!--spring监听器的配置，用于在启动Web容器时，自动装配ApplicationContext的配置信息-->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener><!--
+	
+	<listener>
+		<listener-class>com.jiutong.dreamhome.security.listener.SecurityListener</listener-class>
+	</listener>
+	
+	  --><!-- SpringSecurity 核心过滤器配置 -->  
+ 	 <!--<filter>   
+	    <filter-name>springSecurityFilterChain</filter-name>    
+	    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>    
+	</filter>  
+	<filter-mapping>  
+	    <filter-name>springSecurityFilterChain</filter-name>  
+	    <url-pattern>/*</url-pattern>    
+	</filter-mapping>  
+	
+	 <listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	-->
+ <welcome-file-list>
+    <welcome-file>video.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  <filter>
+  	<filter-name>struts2</filter-name>
+  	<filter-class>
+  		org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter
+  	</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>struts2</filter-name>
+  	<url-pattern>/*</url-pattern>
+  	<dispatcher>REQUEST </dispatcher>
+<dispatcher>FORWARD </dispatcher>
+ <dispatcher>INCLUDE </dispatcher> 
+  </filter-mapping>
+
+ 
+ <!-- 配置过滤器 -->
+ <!--
+ 
+ 
+  <filter>
+ 	<filter-name>userlogin</filter-name>
+ 	<filter-class>com.jiutong.dreamhome.filter.CheckIfLoginFilter</filter-class>
+ </filter>
+ <filter-mapping>
+ 	<filter-name>userlogin</filter-name>
+ 	<url-pattern>/jsp/admin.jsp</url-pattern>
+ </filter-mapping>
+ 
+ 
+ <filter>
+ 	<filter-name>userlogin3</filter-name>
+ 	<filter-class>com.jiutong.dreamhome.filter.CheckIfLoginFilter</filter-class>
+ </filter>
+ <filter-mapping>
+ 	<filter-name>userlogin3</filter-name>
+ 	<url-pattern>/admin.html</url-pattern>
+ </filter-mapping>
+ 
+ 
+  --><!-- 定义URL伪静态，本系统以.html结尾的URL都是进行过伪静态处理 -->
+	<filter>
+	    <filter-name>UrlRewriteFilter</filter-name>
+	    <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	    <filter-name>UrlRewriteFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	    <dispatcher>REQUEST</dispatcher>
+	    <dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+  
+  </web-app>

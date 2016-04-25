@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+/** 网站整体全局样式 */
+body { background: #333333; font-family: 'Calibri', Arial; font-size: 12px; color: #999; }
+a { text-decoration: none; color: #999; }
+a:hover { color: #444; }
+.fr { float: right; }
+.fl { float: left; }
+.htext { color: transparent; font-size: 0; text-indent: -9999px; }
+.center { text-align: center; }
+.left { text-align: left; }
+.right { text-align: right; }
+.positionfix { position: relative; }
+.static { position: static; }
+.clear { clear: both; }
+.singleLine { text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+
+/** 网站整体包含块 */
+.contentWrapper { width: 880px; margin: 0 auto; position: relative; }
+.globalWrapper { background: #000; padding: 22px 40px 15px; border: 8px solid #BA9B53; border-top: 0; }
+
+/** 网站头部样式 */
+.header { height: 80px; }
+.header .logo { width: 277px; height: 74px; position: absolute; top: 0; left: 0; background: url('../images/xtd_top_logo.png') no-repeat; }
+.header .shares { width: 190px; height: 60px; position: absolute; top: 0; right: -140px; background: url('../images/xtd_logo.png') no-repeat;}
+.header .shares li { float: left; margin-right: 10px; }
+.header .shares li a { display: block; width: 51px; height: 60px; }
+
+/** Login 登录界面样式 */
+.loginWrapper { width: 333px; height: 507px; position: absolute; top: 50%; left: 50%; margin: -202px auto auto -264px; background: url('../images/xtd_login3.png') no-repeat; }
+/** .loginWrapper { width: 528px; height: 404px; position: absolute; top: 50%; left: 50%; margin: -202px auto auto -264px; background: url('../images/xtd_login.png') no-repeat; }*/
+
+
+/** 顶部导航样式 */
+.navigator { height: 30px; width: 880px; margin-top: 30px; overflow: hidden; }
+.navigator .menu ul li { float: left; height: 30px; line-height: 30px; }
+.navigator .menu ul li a { height: 30px; line-height: 30px; background: url('../images/xtd_navigator.png') no-repeat; display: block; overflow: hidden; }
+.navigator .menu ul li a.one { width: 96px; background-position: 0 0; }
+.navigator .menu ul li a.two { width: 162px; background-position: -96px 0; }
+.navigator .menu ul li a.three { width: 184px; background-position: -258px 0; }
+.navigator .menu ul li a.four { width: 156px; background-position: -600px 0; }
+.navigator .menu ul li a.five { width: 158px; background-position: -442px 0; }
+.navigator .menu ul li a.six { width: 122px; background-position: -756px 0; }
+.navigator .menu ul li a.one:hover, .navigator .menu ul li a.one.curr { background-position: 0 -30px; }
+.navigator .menu ul li a.two:hover, .navigator .menu ul li a.two.curr { background-position: -96px -30px; }
+.navigator .menu ul li a.three:hover, .navigator .menu ul li a.three.curr { background-position: -258px -30px; }
+.navigator .menu ul li a.four:hover, .navigator .menu ul li a.four.curr { background-position: -600px -30px; }
+.navigator .menu ul li a.five:hover, .navigator .menu ul li a.five.curr { background-position: -442px -30px; }
+.navigator .menu ul li a.six:hover, .navigator .menu ul li a.six.curr { background-position: -756px -30px; }
+
+/** 首页图片切换效果样式 */
+.mainSlider { margin-top: 10px; overflow: hidden; }
+.mainSlider ul { width: 1000px; height: 526px; }
+.mainSlider .block { position: relative; width: 170px; height: 170px; float: left; margin: 0 8px 8px 0; overflow: hidden; }
+.mainSlider .imageBlock, .mainSlider .colorBlock { position: absolute; top: 0; left: 0; width: 170px; height: 170px; }
+.mainSlider .imageBlock img { width: 170px; height: 170px; }
+.mainSlider .colorBlock { top: 170px; }
+
+/** Events 列表样式 */
+.eventsWrapper { margin-top: 10px; overflow: hidden; }
+.eventsWrapper ul { float: left; width: 910px; }
+.eventsWrapper li { width: 219px; height: 219px; margin: 1px 1px 0 0; float: left; overflow: hidden; }
+.eventsWrapper li img, .eventsWrapper li a { display: block; width: 219px; height: 219px; }
+.eventsWrapper li a:hover { background: #000; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; filter: alpha(opacity=70); opacity: 0.7; }
+
+/** App Camera 页面样式 */
+.cameraWrapper { margin-top: 10px; overflow: hidden; }
+.cameraWrapper .appWrapper { background: #BFA353 url('../images/xtd_apps.png') no-repeat center; height: 301px; }
+.appWrapper .iphone { position: absolute; top: 179px; left: 329px; width: 129px; height: 41px; border-radius: 5px; }
+.appWrapper .android { position: absolute; top: 239px; left: 329px; width: 129px; height: 43px; border-radius: 5px; }
+.appWrapper .down:hover { background: #fff; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)"; filter: alpha(opacity=20); opacity: 0.2; }
+.cameraWrapper .showkissTitle { background: url('../images/xtd_camera_showkiss_text.png') no-repeat left center; height: 60px; }
+.cameraWrapper .gallery { height: 170px; overflow: hidden; }
+.cameraWrapper .gallery ul { position: absolute; top: 0; left: 0; width: 10000px; }
+.cameraWrapper .gallery li { float: left; width: 170px; height: 170px; margin: 0 8px 0 0; }
+.cameraWrapper .gallery img { width: 170px; height: 170px; }
+.gallery .gallery_scroll_block { position: absolute; top: 0; width: 85px; height: 170px; background: #000 none no-repeat center; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; filter: alpha(opacity=50); opacity: 0.5; cursor: pointer; }
+.gallery .gallery_scroll_block:hover { -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; filter: alpha(opacity=60); opacity: 0.6; }
+.gallery .gallery_scroll_left_block { left: 0; background-image: url('../images/xtd_gallery_arrow_left.png'); }
+.gallery .gallery_scroll_right_block { right: 0; background-image: url('../images/xtd_gallery_arrow_right.png'); }
+
+/** Spceials 产品页面，列表样式 */
+.specialsWrapper { margin-top: 10px; background: #B1965C;  height: 598px; min-height: 598px; } /**height: auto!important;*/
+.specialsWrapper .specialsLeftWrapper { position: absolute; top: 0; left: 0; width: 195px; padding: 22px 0 20px 20px; color: #000; }
+.specialsLeftWrapper .sp_title_1 { height: 29px; line-height: 29px; background: url('../images/xtd_specials_kiss_kiss.png') no-repeat; border-bottom: 1px solid #000; padding: 0 0 20px 0; }
+.specialsLeftWrapper .sp_desc { margin-top: 20px; width: 194px; height: 364px; background: url('../images/xtd_specials_kissmarket.png') no-repeat;  }/**开放启用  ../images/xtd_specials_kissmarket.png' */
+.specialsLeftWrapper .sp_title_2 { font-size: 14px; margin-top: 0; font-weight: bold; }
+.specialsLeftWrapper li { line-height: 16px; margin-top: 10px; }
+.specialsLeftWrapper a.brandLink { color: #000; font-size: 12px; display: block; }
+.specialsLeftWrapper a.brandLink:hover, .specialsLeftWrapper a.brandLink.curr { color: #fff; }
+.specialsWrapper .products { margin-left: 233px; width: 647px; background: #fff;}
+.specialsWrapper .products ul { float: left; }
+.specialsWrapper .products li { float: left; }
+.specialsWrapper .products .pd { width: 190px; margin-left: 19px; }
+.pd img { width: 150px; height: 110px; text-align: center; padding: 13px 20px; border-bottom: 1px solid #949494; }
+.pd .pdName a { display: block; margin: 0 7px; color: #000; line-height: 18px; }
+.pd .pdName a:hover { color: #B1965C; }
+.pd .pdBottom { border-bottom: 2px solid #000; height: 20px; line-height: 20px; padding:0 6px; }
+.pd .pdBottom .pdPrice { color: #000; font-size: 13px; }
+.pd .pdBrand { height: 18px; line-height: 18px; color: #000; margin: 0 7px; }
+.pd em.ic_new { display: inline-block; width: 42px; height: 12px; background: url('../images/xtd_product_ic_new.png') no-repeat; }
+.pd .pdBottom .favshare { height: 22px; width: 80px; line-height: 22px; position: absolute; top: -2px; right: 20px; background: url('../images/xtd_product_ic_fav_and_share.png') no-repeat; }
+.favshare .ic_fav { padding-left: 22px; }
+.favshare .ic_share { padding-left: 38px; }
+/** 产品列表页面分页效果样式 */
+.specialsWrapper .pageWrapper { position: absolute; top: 10px; right: 15px; }
+.specialsWrapper .pageWrapper li { float: left; }
+.specialsWrapper .pageWrapper a.page { display: block; padding: 3px 6px; color: #000; text-decoration: none; margin-right: 2px; }
+.specialsWrapper .pageWrapper a.page:hover, .pageWrapper a.page.curr { color: #fff; background: #000; }
+
+/** Kisses 列表页面，列表样式 */
+.kissesWrapper { margin-top: 10px; overflow: hidden; background: #B79E63; height: auto!important; height: 530px; min-height: 530px; }
+.kissesWrapper .kissesLeftWrapper { width: 195px; padding: 22px 0 20px 20px; color: #000; }
+.kissesLeftWrapper .kisses_title_1 { height: 65px; background: url('../images/xtd_kisses_title.png') no-repeat; margin: 5px 0 0 8px; }
+.kissesLeftWrapper .kisses_counter { height: 60px; margin: 0 0 0 4px; }
+.kissesLeftWrapper .kisses_counter li { float: left; width: 45px; height: 60px; background: url('../images/xtd_counter_number.png') no-repeat; }
+.kissesLeftWrapper .kisses_counter li.counter_0 { background-position: 0 0; }
+.kissesLeftWrapper .kisses_counter li.counter_1 { background-position: -45px 0; }
+.kissesLeftWrapper .kisses_counter li.counter_2 { background-position: -90px 0; }
+.kissesLeftWrapper .kisses_counter li.counter_3 { background-position: -135px 0; }
+.kissesLeftWrapper .kisses_counter li.counter_4 { background-position: -180px 0; }
+.kissesLeftWrapper .kisses_counter li.counter_5 { background-position: -225px 0; }
+.kissesLeftWrapper .kisses_counter li.counter_6 { background-position: -270px 0; }
+.kissesLeftWrapper .kisses_counter li.counter_7 { background-position: -315px 0; }
+.kissesLeftWrapper .kisses_counter li.counter_8 { background-position: -360px 0; }
+.kissesLeftWrapper .kisses_counter li.counter_9 { background-position: -405px 0; }
+.kissesLeftWrapper .kisses_desc { font-size: 16px; line-height: 16px; padding: 8px 0 10px 8px; }
+.kissesLeftWrapper .kisses_counter_word { padding: 0; margin: 10px 0; background: url('../images/xtd_kisses_side_counter.png') no-repeat; width: 187px; height: 139px; }
+.kissesLeftWrapper .kisses_details { padding: 10px 0 18px 8px; border-bottom: 1px solid #000; }
+.kissesLeftWrapper .kisses_details a {display: block; width: 108px; height: 30px; background: url('../images/xtd_kisses_details.png') no-repeat; }
+.kissesLeftWrapper .datepicker { width: 195px; margin: 20px auto 0 auto; }
+.kissesWrapper .kissPhotos, .kissesWrapper .kissesDetails { position: absolute; left: 233px; top: 0; height: 100%; width: 647px; background: #000; overflow: hidden; }
+.kissPhotos ul { float: left; padding-left: 1px; }
+.kissPhotos li { float: left; margin: 0 0 10px 21px; }
+.kissPhotos img.photo { width: 130px; height: 130px; cursor: pointer; }
+.kissPhotos .photoWrapper { position: relative; padding: 5px 5px 3px 5px; background: #fff; border-radius: 3px; }
+.kissPhotos .photoWrapper .photoAction { height: 18px; line-height: 18px; background: url('../images/xtd_kisses_photo_shares.png') no-repeat 50px center; }
+.kissPhotos .photoWrapper .photoAction .ic_views { margin-left: 68px; width: 25px; display: inline-block; }
+.kissPhotos .photoWrapper .photoAction .ic_favs { margin-left: 12px; width: 25px; display: inline-block; }
+.kissPhotos .photoWrapper .photoAction .ic_shares { margin-left: 12px; width: 19px; display: inline-block; }
+.kissPhotos .pageWrapper { position: absolute; right: 0; top: 505px; }
+.kissPhotos .pageWrapper a.pre { display: inline-block; margin-right: 20px; width: 32px; height: 19px; background: url('../images/xtd_ic_page_arrow_bg.png') no-repeat 0 0; }
+.kissPhotos .pageWrapper a.next { display: inline-block; width: 32px; height: 19px; background: url('../images/xtd_ic_page_arrow_bg.png') no-repeat -48px 0; }
+.kissesWrapper .kissesDetails { display: none; }
+.kissesWrapper .kissesDetails .content { margin-left: 25px; font-size: 13px; line-height: 18px; color: #DFD6D6; }
+.kissesWrapper .kissesDetails .content p { margin-top: 3px; }
+.kissesWrapper .kissesDetails .content .back { width: 130px; height: 30px; display: block; background: url('../images/xtd_kisses_lovestory.png') no-repeat; }
+
+/** zone 页面排版样式 */
+.zoneWrapper { margin-top: 10px; overflow: hidden; }
+.zoneWrapper .flashWrapper { height: 500px; text-align: center; border-radius: 1px; overflow: hidden; }
+.zoneWrapper p, .zoneWrapper a { color: #fff; }
+.xtd_author_card { background: #fff; display: none; position: absolute; top: 110px; left: 50%; margin: 0 0 0 -370px; height: 500px; width: 740px; }
+.xtd_author_card .xtd_author_input { margin-left: 370px; width: 370px; height: 500px; background: url('../../images/xtd_image_card_input.png') no-repeat; }
+.xtd_author_card_1 { background: #fff url('../../images/xtd_image_card1.png') no-repeat; }
+.xtd_author_card_2 { background: #fff url('../../images/xtd_image_card2.png') no-repeat; }
+.xtd_author_card_3 { background: #fff url('../../images/xtd_image_card3.png') no-repeat; }
+.xtd_author_card_4 { background: #fff url('../../images/xtd_image_card4.png') no-repeat; }
+.xtd_author_card_5 { background: #fff url('../../images/xtd_image_card5.png') no-repeat; }
+.xtd_author_card_6 { background: #fff url('../../images/xtd_image_card6.png') no-repeat; }
+.xtd_author_card input, .xtd_author_card textarea { border: 0; font-size: 12px; background: #B2B2B2; color: #4C4C4C; }
+.xtd_author_card #toName { position: absolute; top: 38px; right: 42px; width: 212px; height: 28px; padding: 0 8px;}
+.xtd_author_card #toEmail { position: absolute; top: 79px; right: 42px; width: 212px; height: 28px; padding: 0 8px; }
+.xtd_author_card #fromName { position: absolute; top: 132px; right: 42px; width: 212px; height: 28px; padding: 0 8px; }
+.xtd_author_card #fromEmail { position: absolute; top: 173px; right: 42px; width: 212px; height: 28px; padding: 0 8px; }
+.xtd_author_card #sendWords { position: absolute; top: 227px; right: 109px; width: 144px; height: 142px; padding: 8px;}
+.xtd_author_card a.xtd_preview { position: absolute; top: 422px; right: 43px; width: 98px; height: 30px; }
+.xtd_author_card a.xtd_send { position: absolute; top: 422px; right: 42px; width: 108px; height: 30px; }
+.xtd_author_card a.xtd_preview:hover, .xtd_author_card a.xtd_send:hover { background: #000; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; filter: alpha(opacity=30); opacity: 0.3; }
+.xtd_author_card_output { background: #000 none no-repeat center; display: none; position: absolute; top: 100px; left: 50%; margin: 0 0 0 -395px; height: 637px; width: 790px; z-index: 9; }
+
+.xtd_author_card_output .shares { position: absolute; left: 0; bottom: 0; width: 790px; height: 79px; background: url('../images/xtd_author_card_output_shares.png') no-repeat; }
+.xtd_author_card_output .shares .xtd_author_card_output_back,
+.xtd_author_card_output .shares .share_author_card_weibo,
+.xtd_author_card_output .shares .share_author_card_email,
+.xtd_author_card_output .shares .share_author_card_download { position: absolute; }
+.xtd_author_card_output .shares .xtd_author_card_output_back:hover,
+.xtd_author_card_output .shares .share_author_card_weibo:hover,
+.xtd_author_card_output .shares .share_author_card_email:hover,
+.xtd_author_card_output .shares .share_author_card_download:hover { background: #000; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; filter: alpha(opacity=30); opacity: 0.3; } 
+.xtd_author_card_output .shares .xtd_author_card_output_back { left: 26px; top: 25px; height: 30px; width: 108px; }
+.xtd_author_card_output .shares .share_author_card_weibo { left: 608px; top: 11px; height: 46px; width: 47px; }
+.xtd_author_card_output .shares .share_author_card_email { left: 666px; top: 11px; height: 46px; width: 47px; }
+.xtd_author_card_output .shares .share_author_card_download { left: 725px; top: 11px; height: 46px; width: 47px; }
+
+/** 网站页面底部样式 */
+.footer { padding: 10px; }
+.footer.contentWrapper { width: 976px; }
+.footer .shares li { float: left; margin-right: 8px; width: 26px; height: 26px; }
+
+/** kisses 板块相册画廊 Gallery 的效果样式 */
+.coverLayer { display: none; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: #000; }
+.coverLayer .coverLayerClose { position: absolute; top: 5%; right: 5%; width: 60px; height: 60px; cursor: pointer; background: url("../images/xtd_ic_page_photo_close.png") no-repeat center; }
+.photoLayer { position: absolute; top: 100px; left: 50%; margin: 0 0 0 -300px; height: 560px; width: 640px; }
+.photoLayer .leftArrow { position: absolute; width: 60px; height: 100%; left: 0; top: 0; cursor: pointer; background: url("../images/xtd_ic_page_photo_arrow.png") no-repeat left center; }
+.photoLayer .rightArrow { position: absolute; width: 60px; height: 100%; right: 0; top: 0; cursor: pointer; background: url("../images/xtd_ic_page_photo_arrow.png") no-repeat right center; }
+.photoLayer .imageLayer { position: absolute; height: 560px; width: 480px; top: 0; left: 50%; margin-left: -240px; background: #EEEBE6; border-radius: 8px; overflow: hidden; box-shadow: 0px 2px 2px #000; }
+.photoLayer .imageLayer img.galleryPhoto { width: 480px; height: 480px; border-radius: 9px 9px 0 0; }
+.photoLayer .imageLayer .galleryPhotoBottomLayer { position: absolute; bottom: 0; left: 0; width: 480px; height: 80px; background: #EEEBE6 url('../images/xtd_gallery_photo_shares.png') no-repeat center; }
+.galleryPhotoBottomLayer .shares:hover, .imageDownloadGuideLayer .shares:hover { background: #000; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)"; filter: alpha(opacity=10); opacity: 0.1; }
+.gallery_kisses_photo_share_weibo, 
+.gallery_kisses_photo_share_download, 
+.gallery_kisses_photo_share_like { position: absolute; right: 20px; top: 11px; height: 45px; width: 45px; display: inline-block; cursor: pointer; border-radius: 4px; }
+.imageDownloadGuideLayer a { position: absolute; left: 100px; top: 500px; height: 39px; width: 136px; display: inline-block; cursor: pointer; border-radius: 4px; }
+.gallery_kisses_photo_share_weibo { right: 80px; }
+.gallery_kisses_photo_share_like { right: 395px; top: 10px; height: 60px; width: 64px; }
+a.gallery_kisses_photo_share_like:hover { background: url('../images/xtd_share_like_red.png') no-repeat 0px 1px; }
+
+.imageDownloadGuideLayer { position: absolute; height: 579px; width: 501px; top: 90px; left: 50%; margin: 0 0 0 -230px; background: #EEEBE6; overflow: hidden; background: url("../images/xtd_download_guide.png") no-repeat; }
+.imageDownloadGuideLayer a.cancel {left: 100px;}
+.imageDownloadGuideLayer a.ok { left: 266px; }
+
+/** */
+.xtd_header_weixin_qr { position: absolute; top: 100px; left: 50%; margin-left: -227px; width: 454px; height: 510px; background: url('../images/xtd_kissmas_weixin_qr.png') no-repeat; display: none; box-shadow: 0px 2px 2px #000; border-radius: 5px; }

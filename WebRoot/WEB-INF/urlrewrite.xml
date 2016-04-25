@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+
+<!--
+
+    Configuration file for UrlRewriteFilter
+    http://www.tuckey.org/urlrewrite/
+
+-->
+<urlrewrite>
+
+	<rule>  
+        <from>^/admin.html</from>
+        <to>/jsp/admin.jsp</to>
+    </rule>
+    
+    <rule>  
+        <from>^/company/update/pwd.html</from>
+        <to>/jsp/update_company_pwd.jsp</to>
+    </rule>
+	<rule>  
+        <from>^/sys/manage/user/list.html</from>
+        <to>/user/GetUserApplyByConditionsAction</to>
+    </rule>
+	<rule>  
+        <from>^/user/user_list.html</from>
+        <to>/user/GetAllCustomerInfoByCompanyIdAction</to>
+    </rule>
+    
+    <rule>  
+        <from>^/sys/manage/user/cooperate.html</from>
+        <to>/user/UserMatchResultAction</to>
+    </rule>
+	<rule>  
+        <from>^/dologin.html</from>
+        <to>/user/DoLoginAction</to>
+    </rule>
+     <rule>  
+        <from>^/create_excel.html</from>
+        <to>/user/DoCreateExcelAction</to>
+    </rule>
+    <rule>  
+        <from>^/login.html</from>
+        <to>/jsp/login.jsp</to>
+    </rule>
+     
+     <rule>  
+        <from>^/sys/manage/company/user/list.html</from>
+        <to>/user/GetAllCustomerInfoByCompanyIdAction</to>
+    </rule>
+     <rule>  
+        <from>^/sys/manage/company/list.html</from>
+        <to>/company/GetAllCompanyInfoAction</to>
+    </rule>
+    
+    <rule>  
+        <from>^/sys/manage/company/info.html</from>
+        <to>/company/GetCompanyInfoAction</to>
+    </rule>
+     <rule>  
+        <from>^/sys/manage/company/add.html</from>
+        <to>/jsp/add_company.jsp</to>
+    </rule>
+   
+    
+    
+    
+      <rule>  
+        <from>^/sys/manage/authority/user_role.html</from>
+        <to>/user/UserManageAction</to>
+    </rule>
+       <rule>  
+        <from>^/sys/manage/authority/role_resource.html</from>
+        <to>/role/RoleManageAction</to>
+    </rule>
+   
+     <rule>  
+        <from>^/sys/manage/data/user_area.html</from>
+        <to>/jsp/user_area.jsp</to>
+    </rule>
+    
+    
+</urlrewrite>

@@ -1,0 +1,76 @@
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:aop="http://www.springframework.org/schema/aop"  
+    xmlns:context="http://www.springframework.org/schema/context" 
+    xmlns:task="http://www.springframework.org/schema/task"
+    xmlns:tx="http://www.springframework.org/schema/tx" 
+    xsi:schemaLocation="  
+       http://www.springframework.org/schema/beans  
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+       http://www.springframework.org/schema/aop  
+       http://www.springframework.org/schema/aop/spring-aop-3.0.xsd  
+       http://www.springframework.org/schema/context  
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://www.springframework.org/schema/task
+	   http://www.springframework.org/schema/task/spring-task-3.1.xsd
+	   http://www.springframework.org/schema/tx 
+	   http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+      
+     
+      <!-- 使用属性文件配置数据源 -->  
+ <bean id="propertyPlaceholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+    <property name="location" value="/WEB-INF/jdbc/jdbc.properties"/>  
+  </bean>
+     <bean id="dataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource">
+        <property name="alias" value="9tong"/>
+        <property name="driver" value="${jdbc.driverClassName}"/>
+        <property name="driverUrl" value="${jdbc.url}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/> 
+        <property name="houseKeepingTestSql" value="select CURRENT_DATE"/>
+        <property name="maximumConnectionCount" value="20"/>
+        <property name="minimumConnectionCount" value="5"/>
+        <property name="simultaneousBuildThrottle" value="10"/>
+        <property name="maximumActiveTime" value="2000000"/>
+		<property name="prototypeCount" value="2"/>
+   </bean>
+  
+       
+ 
+    
+    <bean id="baseDAO" class="com.lb.dao.impl.BaseDaoImpl">  
+    <property name="dataSource" ref="dataSource"></property>  
+    </bean>  
+     <bean id="txManager"  
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">  
+        <property name="dataSource" ref="dataSource" />  
+    </bean>
+    
+    
+<!--     <tx:annotation-driven transaction-manager="txManager" />  
+      
+ 
+    <tx:advice id="txAdvice" transaction-manager="txManager">  
+        <tx:attributes>  
+           <tx:method name="get*" propagation="NOT_SUPPORTED" />  这里为什么不能指定为 REQUIRED
+            <tx:method name="del*" propagation="REQUIRED"/>  
+             <tx:method name="add*" propagation="REQUIRED"/>  
+            <tx:method name="*" propagation="REQUIRED"/>  
+        </tx:attributes>  
+    </tx:advice>  
+      
+    <aop:config>  
+        <aop:pointcut id="transactionPointCut" expression="execution(* com.lb.admin.service.impl.*.*(..))"/>  
+        <aop:advisor pointcut-ref="transactionPointCut" advice-ref="txAdvice"/>  
+    </aop:config> 
+  -->
+ 
+  
+  
+ <!-- 
+  <task:annotation-driven/>
+  -->
+    
+     <!--定时任务方法 -->
+    <context:component-scan base-package="*"/> 
+</beans>

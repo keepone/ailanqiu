@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+                        "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+ <tlib-version>1.0</tlib-version>
+ <jsp-version>1.2</jsp-version>
+ <short-name>p</short-name>
+ <uri>http://www.lanqiure.com/tag</uri>
+ 
+  <tag>
+ 	<name>pager</name>
+ 	<tag-class>com.lb.utils.CommonPageTag</tag-class>
+ 		<body-content>empty</body-content> 
+ 		<attribute>
+		<name>TARGET_URL</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+ 	</tag>
+ 	<tag>
+ 	<name>pager2</name>
+ 		<tag-class>com.lb.utils.PageTag</tag-class>
+ 		<body-content>empty</body-content> 
+ 		<attribute>
+		<name>FORM_NAME</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+ 	</tag>
+ 	<tag>
+ 	<name>date</name>
+ 		<tag-class>com.lb.utils.DateTag</tag-class>
+ 		<body-content>empty</body-content> 
+ 		<attribute>
+		<name>DATE</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+		</attribute>
+ 	</tag>
+</taglib>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:s="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+	<bean id="loggerListener" class="org.springframework.security.access.event.LoggerListener" />
+	<!-- 配置http请求， 在<http>中设置了auto="true"，Spring Security就会在服务启动时自动加载所有的过滤器链-->
+	<!-- access-denied-page 表示该请求被拒绝，显示哪个页面 -->
+	<s:http auto-config="true">
+		<!-- intercept-url指定不需要通过滤认证的页面有哪些 -->
+		<s:intercept-url pattern="/jsp/login.jsp" filters="none"/>
+		<s:intercept-url pattern="/js/*" filters="none"/>
+		<s:intercept-url pattern="/css/*" filters="none"/>
+		<s:intercept-url pattern="/images/*" filters="none"/>
+		<s:intercept-url pattern="/jsp/index.jsp" access="IS_AUTHENTICATED_FULLY"/>
+		
+		<!-- 登面页面的表单 -->
+		<s:form-login login-page="/jsp/login.jsp" default-target-url="/admin.html" 
+			authentication-failure-url="/jsp/login.jsp?error=true" />
+		 <s:remember-me key="jbcpPetStore"/>  
+		<!-- 登出跳转到哪个页面 -->
+		<s:logout logout-success-url="/jsp/login.jsp"/>
+		<s:http-basic/>
+		<s:custom-filter ref="springSecurityFilter"  before="FILTER_SECURITY_INTERCEPTOR"/>
+	</s:http>
+
+	<bean id="md5" class="org.springframework.security.authentication.encoding.Md5PasswordEncoder">
+	</bean>
+	
+	<s:authentication-manager alias="authenticationManager" >
+		<s:authentication-provider user-service-ref="userService">
+		</s:authentication-provider>
+	</s:authentication-manager>
+ 
+
+	<bean id="mySecurityMetadataSource" class="com.jiutong.dreamhomoe.security.invocation.MySecurityMetadataSource" />
+	
+	<bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
+		<property name="allowIfAllAbstainDecisions" value="false" />
+		<property name="decisionVoters">
+			<list>
+				<bean class="org.springframework.security.access.vote.RoleVoter"></bean>
+				<bean class="org.springframework.security.access.vote.AuthenticatedVoter"></bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="springSecurityFilter" class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
+		<property name="accessDecisionManager" ref="accessDecisionManager" />
+		<property name="objectDefinitionSource" ref="mySecurityMetadataSource" />
+		<property name="authenticationManager" ref="authenticationManager" />
+	</bean>
+	
+
+
+</beans>

@@ -1,0 +1,295 @@
+/* v1.0 | 2014-3-11
+	@author great.maronghua@gmail.com
+   License: none (public domain)
+*/
+.recipe-categories { top: 0; left: 0; }
+.recipe-category-item { width: 304px; height: 228px; float: left; margin: 11px 0 0 11px; }
+.food-category-item { width: 610px; height: 308px; display: block; margin: 20px 0 0 15px; }
+.food-list-item { width: 610px; height: 422px; display: block; margin: 20px 0 0 15px; }
+
+.product-list { top: 0; left: 0; }
+.product-list-item { width: 277px; height: 451px; display: block; margin: 34px 0 0 32px; }
+.yugou-list { top: 0; left: 0; }
+.yugou-list li { height: 128px; }
+.yugou-list-item { width: 640px; height: 128px; display: block; }
+.slide-menus { top: 88px; left: 0; }
+.slide-menus li, .slide-menus a { display: block; height: 89px; width: 418px; }
+
+
+
+/** 上面都很乱，都是乱七八糟的 */
+body { background: #fff; }
+.recipe-wrapper { background: #fff; position: relative; width: 640px; padding: 0; margin: 0 auto; overflow: hidden; }
+.recipe-bottom-fix-button { left: 50%; bottom: 0; width: 640px; margin: 0 0 0 -320px; height: 88px; line-height: 88px; font-size: 38px; color: #fff; background: #00B1AF; font-weight: bold; }
+/
+/** 食材管理界面样式 */
+.door-list { }
+.door-list-item { height: 120px; line-height: 120px; padding: 0 10px 0 100px; font-size: 36px; background: url('../images/recipe/guanli/door-list-bg-image.png') no-repeat 28px 39px; font-weight: bold; }
+.door-list-item-2 { background-position: 28px -54px; }
+.door-list-item .n { color: #00B1AF; font-size: 36px; padding-right: 45px; font-weight: normal; }
+.door-list-item .n_2 { background-position: 22px 22px; }
+
+.recipe-nav-title { height: 88px; line-height: 88px; font-size: 32px; color: #fff; background: #C6DBE4; } 
+.recipe-nav-title .title { padding-left: 30px; font-size: 36px; }
+.recipe-nav-title .nav-right-menus { right: 0; top: 0; height: 100%; }
+.recipe-nav-title .nav-right-menus .nav-right-menu { display: inline-block; height: 100%; padding: 0 20px 0 50px; border-left: 1px solid #fff; color: #fff; background: url('../images/recipe/guanli/item-list-nav-bg.png') no-repeat 10px center; }
+.recipe-nav-title .nav-right-menus .nav-right-menu-2 { background-position: -134px center; }
+
+.recipe-index-guanli { background: url("../images/recipe/guanli/index-food-list-bg.png") repeat-y 0 0; }
+.door-item-list { margin: 0; min-height: 1024px; }
+.door-item-list ul, .door-item-list li { float: left; }
+.door-item-list li { margin: 0 -34px 0 31px; }
+.door-item-list .item { width: 195px; height: 208px; background: url('../images/recipe/guanli/food-list-img-bg.png') no-repeat 3px 38px }
+.door-item-list .item img { width: 125px; height: 125px; padding: 0; border-radius: 22px; margin-top: 50px; }
+.door-item-list .item .name { font-size: 18px; color: #508192; margin-top: 0px; font-weight: bold; background: url('../images/recipe/guanli/food-list-name-bg.png') no-repeat center; display: inline-block; width: 90px; height: 32px; line-height: 32px; text-align: center; left: 50%; bottom: -12px; margin-left: -45px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+.door-item-list .item .circle, .guanli-add-wrapper .circle { position: absolute; top: 16px; right: 4px; background: url('../images/recipe/guanli/food-manage-circle-bg.png') no-repeat 0 3px; width: 60px; height: 60px; line-height: 60px; color: #fff; font-size: 22px; font-weight: bold; text-align: center; }
+.door-item-list .item .circle.no, .guanli-add-wrapper .circle.no{ background-position: 0px -125px; }
+.guanli-add-wrapper .circle { left: 140px; top: -4px; }
+
+.guanli-nav .title { padding: 0; color: #508192; text-align: center; font-weight: bold; }
+.guanli-nav { box-shadow: 0px 5px 30px -10px #2A5469; }
+.guanli-nav .control { position: absolute; margin-top: -31px; top: 50%; width: 90px; height: 58px; border: 2px solid #508192; border-radius: 13px; background: #DDE9EF none no-repeat center; }
+.guanli-nav .control-add { left: 15px; background-image: url('../images/recipe/guanli/food-manage-nav-control-add.png'); }
+.guanli-nav .control-remove { right: 15px; background-image: url('../images/recipe/guanli/food-manage-nav-control-remove.png'); }
+.guanli-nav .control-delete { left: 15px; background-image: url('../images/recipe/guanli/food-manage-nav-control-delete.png'); }
+.guanli-nav .control-right { right: 15px; background-image: url('../images/recipe/guanli/food-manage-nav-control-right.png'); }
+.guanli-nav .control-back { left: 15px; background-image: url('../images/recipe/guanli/food-manage-nav-control-back.png'); }
+.navigations { position: absolute; top: 50%; left: 50%; margin: -31px 0 0 -185px; height: 58px; line-height: 58px; }
+.navigations li { float: left; border-radius: 13px; padding: 0; margin: 0; }
+.navigations li a { width: 120px; display: block; border: 2px solid #508192; text-align: center; overflow: hidden; }
+.navigations li a.left { border-radius: 13px 0 0 13px; border-right: 0; }
+.navigations li a.center { }
+.navigations li a.right { border-radius: 0 13px 13px 0; border-left: 0; }
+.navigations li a.curr { background: url('../images/recipe/guanli/ic-nav-bg.gif') repeat; color: #fff; }
+
+.guanli-add-wrapper { }
+.guanli-add-wrapper .attach-image { width: 193px; height: 154px; display: inline-block; background: transparent url('../images/recipe/guanli/image-attach.png') no-repeat center; border-radius: 2px; margin: 20px 10px; } 
+.guanli-add-wrapper .attach-image img { width: 122px; height: 124px; margin: 12px 0 0 34px; border-radius: 20px; background: transparent; }
+.guanli-add-wrapper .add-head-input { left: 225px; top: 25px; height: 158px; }
+.guanli-add-wrapper .food-name-slide { position: absolute; top: 0; left: 0; width: 84px; height: 76px; display: inline-block; }
+.add-food-input-name { width: 275px; height: 52px; padding: 10px 0 10px 90px; border: 2px solid #80AABA; border-radius: 13px; background: #fff url('../images/recipe/guanli/add-slide-image-bg.png') no-repeat -2px center; font-size: 30px; }
+a.add-radio { display: inline-block; height: 75px; margin: 5px 50px 0 0; line-height: 75px; background: url('../images/recipe/guanli/add-radio-on-off.png') no-repeat -190px center; padding-left: 70px; font-size: 28px; }
+a.add-radio.on { background-position: 13px center; }
+.guanli-add-item { margin-top: 35px; height: 85px; line-height: 85px; padding: 0 10px 0 30px; font-size: 28px; background: #fff; }
+.guanli-add-item .n { color: #00B1AF; font-size: 25px; padding-right: 45px; font-weight: normal; }
+.guanli-add-item .switch { width: 60px; height: 60px; line-height: 60px; padding: 0; border: 1px solid #BEBEBE; margin: 10px 30px 0 0; text-align: center; }
+.guanli-add-item input { border: 2px solid #80AABA; border-radius: 12px; height: 30px; line-height: 30px; width: 100px; padding: 10px 15px; font-size: 28px; font-weight: bold; color: #444; }
+.guanli-add-item input.l_bz { background: url('../images/recipe/guanli/text-tian.png') no-repeat right center; }
+.door-radio-select { background: url('../images/recipe/guanli/door-choose-image.png') no-repeat -10px -11px; width: 375px; height: 44px; margin-top: 20px; }
+.door-radio-select a.door-radio { position: absolute; top: 0; left: 0; display: block; width: 140px; height: 44px; background: url('../images/recipe/guanli/door-choose-image.png') no-repeat -9px -68px; }
+.guanli-add-yellow-tips { margin: 35px 20px 0 20px; padding: 30px; color: #36687A; background: url('../images/recipe/guanli/add-bottom-tips-bg.png') no-repeat center; width: 540px; font-size: 26px; line-height: 35px; background-size: cover;}
+
+.food-name-list .category-item { background: url('../images/recipe/guanli/names/icon-food-bg.png') no-repeat -2px -2px; }
+.food-name-list { background: #fff; color: #777777; border: 2px solid #80AABA; border-width: 2px 0 0 2px; border-radius: 12px; font-size: 30px; line-height: 87px; margin: 30px; }
+.food-name-list .title { padding-left: 105px; border: 2px solid #80AABA; border-width: 0px 2px 2px 0; background: transparent none no-repeat 15px center; }
+.food-name-list .title-0 { background-image: url('../images/recipe/guanli/names/icon-food-0.png'); }
+.food-name-list .title-1 { background-image: url('../images/recipe/guanli/names/icon-food-1.png'); }
+.food-name-list .title-2 { background-image: url('../images/recipe/guanli/names/icon-food-2.png'); }
+.food-name-list .title-3 { background-image: url('../images/recipe/guanli/names/icon-food-3.png'); }
+.food-name-list .title-4 { background-image: url('../images/recipe/guanli/names/icon-food-4.png'); }
+.food-name-list .title-5 { background-image: url('../images/recipe/guanli/names/icon-food-5.png'); }
+.food-name-list .title-6 { background-image: url('../images/recipe/guanli/names/icon-food-6.png'); }
+.food-name-list .title-7 { background-image: url('../images/recipe/guanli/names/icon-food-7.png'); }
+.food-name-list .title-8 { background-image: url('../images/recipe/guanli/names/icon-food-8.png'); }
+.food-name-list .title-9 { background-image: url('../images/recipe/guanli/names/icon-food-9.png'); }
+.food-name-list .title-10 { background-image: url('../images/recipe/guanli/names/icon-food-10.png'); }
+.food-name-list .title-11 { background-image: url('../images/recipe/guanli/names/icon-food-11.png'); }
+.food-name-list .title-12 { background-image: url('../images/recipe/guanli/names/icon-food-12.png'); }
+.food-name-list .title-13 { background-image: url('../images/recipe/guanli/names/icon-food-13.png'); }
+.food-name-list .title-14 { background-image: url('../images/recipe/guanli/names/icon-food-14.png'); }
+.food-name-list .datas .item { border: 2px solid #80AABA; border-width: 0 2px 2px 0; }
+
+.food-name-list .datas .item { position: relative; height: 87px; line-height: 87px; font-size: 25px; background: #E7F1F5; }
+.food-name-list .datas img { width: 87px; height: 87px; vertical-align: top; margin-right: 10px;  border-right: 2px solid #80AABA; }
+.food-name-list .datas .item .split { position: absolute; top: 50%; margin-top: -22px; padding-left: 3px; right: 15px; width: 210px; height: 44px; line-height: 44px; background: url('../images/recipe/guanli/food-name-split-bg.png') no-repeat; }
+.food-name-list .datas .item .split a { display: inline-block; width: 70px; color: #fff; text-align: center; }
+.food-name-top-search { width: 640px; height: 87px; background: url('../images/recipe/guanli/food-name-top-search.png') no-repeat 0px 0px; border-bottom: 1px solid #83A4B0; }
+.food-name-top-search input { background: transparent; border-radius: 15px; margin: 23px; display: inline-block; width: 90%; height: 37px; line-height: 37px; padding: 2px 5px; border: 0; font-size: 32px; }
+
+.manage-food-list .food-content { margin-left: 130px; padding: 10px 260px 10px 10px; height: 108px;}
+.manage-food-list .food-image { width: 108px; height: 108px; margin: 10px; }
+.manage-food-list .food-content .manage-actions { position: absolute; top: 30px; right: 20px; }
+.manage-food-list .food-content a.manage-action { display: inline-block; width: 105px; height: 60px; line-height: 60px; font-size: 24px; text-align: center; border: 1px solid #DADADA; font-weight: bold; }
+.manage-food-list .food-content-info .t { font-size: 32px; line-height: 40px; margin-top: 15px; color: #444; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+.manage-food-list .food-content-info .i { font-size: 22px; line-height: 34px; color: #777; }
+.manage-food-list .food-content-info .i span { color: #00B1AF; display: inline-block; padding: 0 5px; }
+
+/** 预购页面样式 */
+.yugou-actions { height: 67px; height: 67px; }
+.yugou-action { float: left; display: inline-block; margin-left: 18px; width: 154px; height: 67px; background: url('../images/recipe/yugou/manage-food-action-image2.png') no-repeat 0px 0px; }
+.yugou-action-add { background-position: 0px 0px; }
+.yugou-action-delete { background-position: -85px 0px; }
+.yugou-action-remove { width: 68px; background-position: 0px -73px; }
+.yugou-action-buy { background-position: -161px 0px; }
+.yugou-action-buy.gray {background-position: 0px 0px; }
+.yugou-buy-way { top: 68px; right: 0; z-index: 99; display: none; width: 350px; }
+.yugou-buy-way .way-t { height: 13px; line-height: 0; overflow: hidden; background: #fff url('../images/recipe/yugou/buy-slide-arrow.png') no-repeat right 0px; }
+.yugou-buy-way .way-i { background: #00B1AF;  padding: 0 20px; border-radius: 10px; }
+.yugou-buy-way .way { display: block; padding: 25px 10px; color: #fff; font-size: 32px; border-bottom: 1px solid #fff; text-align: center; }
+
+/** 微网购页面样式 */
+.weiwanggou-order-history-button { background-color: #fff; font-size: 28px; border: 1px solid #E3E3E3; height: 68px; line-height: 68px; padding-left: 20px; border-radius: 0; margin: 35px 15px; width: auto; display: block; color: #777; text-align: left; }
+.weiwanggou-order-header-title { padding: 20px 20px; margin: 0 20px; color: #666; font-size: 24px; line-height: 30px; }
+.order-food-list-item { margin-bottom: 20px; background: #fff; border: 1px solid #E3E3E3; }
+.order-food-list { margin: 0 15px; }
+.order-food-list .food-content { margin-left: 140px; padding: 20px; }
+.order-food-list .food-content .t { font-size: 32px; line-height: 45px; font-weight: bold; margin-top: 0; }
+.order-food-list .food-content .i { font-size: 26px; line-height: 40px; }
+.order-food-list .food-content .price { right: 30px; top: 20px; font-size: 24px; color: #999999; }
+.order-food-list .food-content .num { top: 80px; font-size: 30px; color: #00B1AF; }
+.weiwanggou-order-bottom { clear: both; height: 80px; line-height: 80px; border-top: 1px solid #E3E3E3; background: #F7F7F7; color: #777; padding: 0 30px; font-size: 24px; }
+.weiwanggou-order-bottom .price { color: #666; }
+.weiwanggou-order-bottom .action { display: inline-block; color: #777; background: #F7F7F7 url('../images/recipe/weiwanggou/order-action-icons.png') no-repeat 0px center; height: 60px; line-height: 60px; padding: 0 0 0 60px; margin-left: 35px; }
+.weiwanggou-order-bottom .wuliu-action-pingjia { background-position: -205px center; }
+.order-food-list .food-image { width: 108px; height: 108px; margin: 20px; }
+
+.weiwanggou-cart-num { height: 46px; line-height: 46px; color: #00B1AF; border: 1px solid #669934; }
+.weiwanggou-cart-num .cart-num-action { display: inline-block; width: 46px; color: #fff; background: #669934; font-size: 30px; }
+.weiwanggou-cart-num .x-num { display: inline-block; text-align: center; width: 60px; color: #000; }
+.weiwanggou-cart-calc-button { background: #669934 url('../images/recipe/weiwanggou/weiwanggou-cart-image.png') no-repeat 230px center; }
+
+.weiwanggou-slide-menu { top: 0; left: 0; min-height: 1160px; background: #57812F; }
+#weiwanggou-main-content { background: #F3F3F3; min-height: 1160px; position: absolute; top: 0; left: 0; box-shadow: 6px 2px 20px 3px #000; }
+
+.weiwanggou-nav-title { padding: 0; background: #669934; }
+.weiwanggou-nav-title .title { padding: 0; font-size: 36px; }
+.weiwanggou-nav-title .weiwanggou-slide { top: 0; left: 0; display: inline-block; width: 88px; height: 88px; background: url('../images/recipe/weiwanggou/weiwanggou-slide-menu-image.png') no-repeat center; }
+.weiwanggou-nav-title .weiwanggou-search { top: 0; right: 0; display: inline-block; width: 88px; height: 88px; background: url('../images/recipe/weiwanggou/weiwanggou-slide-menu-search-image.png') no-repeat center; }
+.weiwanggou-nav-title .weiwanggou-cart { top: 0; right: 0; display: inline-block; width: 88px; height: 88px; background: url('../images/recipe/weiwanggou/weiwanggou-slide-menu-cart-image.png') no-repeat center; }
+.weiwanggou-nav-title .weiwanggou-cart .cart-count { right: 0; top: 0; width: 100%; text-indent: 0; color: #fff; position: absolute; font-size: 20px; text-align: center; padding-right: 4px; }
+
+.weiwanggou-recipe-sort-list { height: 88px; }
+.weiwanggou-recipe-sort-list li { width: 160px; height: 80px; border-top: 4px solid #fff; }
+.weiwanggou-recipe-sort-list li.curr,
+.weiwanggou-recipe-sort-list li:hover { border-bottom: 4px solid #00B1AF; }
+.weiwanggou-recipe-sort-list li a { margin-top: 17px; border-right: 1px solid #E6E6E6; display: block; height: 50px; line-height: 50px; text-align: center; }
+.weiwanggou-recipe-sort-list li a.no-border { border: 0; }
+.weiwanggou-recipe-sort-list li a .text { color: #777; font-size: 30px; }
+.weiwanggou-recipe-sort-list li a .ic-air { margin-left: 15px; display: inline-block; width: 16px; height: 23px; background: url('../images/recipe/weiwanggou/weiwanggou-sort-ic-air.png') no-repeat center; }
+.weiwanggou-recipe-sort-list li a .no-ic-air { display: inline-block; width: 16px; height: 23px; background: none; }
+
+.weiwanggou-main-food-list { margin: 0; padding: 0 0 20px 0; background: #F3F3F3; }
+.weiwanggou-main-food-list li { margin: 17px 0 0 17px; width: 294px; overflow: hidden; }
+.weiwanggou-main-food-list .food-image { width: 294px; height: 240px; }
+.weiwanggou-main-food-list .food-content .name { font-size: 28px; line-height: 38px; color: #777; }
+.weiwanggou-main-food-list .food-content .o-price { font-size: 22px; line-height: 28px; color: #999; }
+.weiwanggou-main-food-list .food-content .o-price .price { text-decoration: line-through; margin-left: 10px; }
+.weiwanggou-main-food-list .food-content .n-price { font-size: 22px; line-height: 26px; color: #999; margin-top: 10px; }
+.weiwanggou-main-food-list .food-content .n-price .price { color: #00B1AF; font-size: 26px; margin-left: 10px; }
+
+.weiwanggou-food-detail { background: #fff; padding-bottom: 120px; }
+.weiwanggou-food-detail .food-image { width: 100%; }
+.weiwanggou-food-detail .food-content p { font-size: 22px; line-height: 35px; padding: 20px; color: #999; }
+.weiwanggou-food-detail .food-content .name { padding-bottom: 10px; }
+.weiwanggou-food-detail .food-content .name p { font-size: 32px; color: #000; padding: 0 20px; line-height: 40px; font-weight: bold; }
+.weiwanggou-food-detail .food-content .name p.no { color: #999; font-size: 18px; font-weight: normal; }
+.weiwanggou-food-detail .food-content .i { margin-left: 20px; font-size: 22px; }
+.weiwanggou-food-detail .food-content .o-price { text-decoration: line-through; }
+.weiwanggou-food-detail .food-content .n-price { color: #00B1AF; font-size: 32px; }
+.weiwanggou-food-detail .food-content .addr { color: #000; }
+.weiwanggou-food-detail .cut-bottom-line { border-color: #DEDEDE; }
+.weiwanggou-float-cart { display: block; right: 20px; bottom: 20px; width: 89px; height: 80px; background: transparent url('../images/recipe/weiwanggou/weiwanggou-float-cart-bg-image.png') no-repeat; font-size: 23px; color: #00B1AF; padding: 16px 7px 0 0; }
+.weiwanggou-bottom-cart { font-weight: normal; background: #669934 url('../images/recipe/weiwanggou/weiwanggou-slide-menu-cart-image.png') no-repeat 210px center; padding-left: 66px; width: 574px; opacity: 0.8; }
+
+.weiwanggou-slide-menu .title { background: #57812F; text-align: left; padding-left: 30px; }
+.weiwanggou-slidemenus { width: 420px; background-color: #57812F; }
+.weiwanggou-slidemenus li { border-top: 1px solid #4E742A; }
+.weiwanggou-slidemenus li, .weiwanggou-slidemenus li a { display: block; height: 87px; line-height: 87px; }
+.weiwanggou-slidemenus li a { color: #fff; font-size: 26px; padding-left: 80px; background: url('../images/recipe/weiwanggou/weiwanggou-slide-menu-icons.png') no-repeat 20px 0px; }
+.weiwanggou-slidemenus .icon-weiwanggou-slidemenu-right { background-image: url('../images/recipe/weiwanggou/icon-slide-menu-arrow-right.png'); background-repeat: no-repeat; background-position: 92% center; }
+.weiwanggou-slidemenus .sm1 a { background-position: 20px -88px; }
+.weiwanggou-slidemenus .sm2 a { background-position: 20px -176px; }
+.weiwanggou-slidemenus .sm3 a { background-position: 20px -264px; }
+.weiwanggou-slidemenus .sm4 a { background-position: 20px -352px; }
+.weiwanggou-slidemenus .sm5 a { background-position: 20px -440px; }
+.weiwanggou-slidemenus .sm6 a { background-position: 20px -528px; }
+.weiwanggou-slidemenus .sm7 a { background-position: 20px -616px; }
+.weiwanggou-slidemenus .sm8 a { background-position: 20px -704px; }
+.weiwanggou-slidemenus .sm9 a { background-position: 20px -792px; }
+.weiwanggou-slidemenus .sm10 a { background-position: 20px -880px; }
+.weiwanggou-slidemenus .icon-weiwanggou-slidemenu-right span.curr { width: 8px; height: 100%; display: inline-block; float: left; background: #fff; overflow: hidden; }
+
+.recipe-top-fix-button { left: 50%; top: 0; text-align: left; bottom: auto; padding-left: 40px; width: 600px; margin: 0 0 0 -320px; height: 88px; line-height: 88px; font-size: 38px; color: #fff; background: #00B1AF url('../images/recipe/weiwanggou/icon-slide-menu-arrow-right.png') no-repeat 95% center; font-weight: bold; }
+
+
+
+/** 食谱随心选页面样式 */
+.shipu-index-categories { padding-bottom: 11px; }
+.shipu-index-categories li { display: block; width: 304px; height: 228px; margin: 0; padding: 0; }
+.shipu-index-categories li .recipe-category-item { display: block; width: 304px; height: 228px; margin: 0; padding: 0; background: url('../images/recipe/shipu/category-image-icons.png') no-repeat -13px -50px; font-size: 30px; }
+.shipu-index-categories li .recipe-category-item { padding-top: 160px; height: 68px; color: #fff; font-weight: bold; text-align: center; }
+.shipu-index-categories li .item1 { background-color: #FBC405; background-position: -13px -50px; }
+.shipu-index-categories li .item2 { background-color: #AF2026; background-position: -324px -50px; }
+.shipu-index-categories li .item3 { background-color: #49BECA; background-position: -13px -289px; }
+.shipu-index-categories li .item4 { background-color: #AACC16; background-position: -324px -289px; }
+.shipu-index-categories li .item5 { background-color: #96A8B2; background-position: -13px -528px; }
+.shipu-index-categories li .item6 { background-color: #F38453; background-position: -324px -528px; }
+.shipu-index-categories li .item7 { background-color: #2C8873; background-position: -13px -767px; }
+.shipu-index-categories li .item8 { background-color: #87726F; background-position: -324px -767px; }
+.shipu-index-categories li { margin: 11px 0 0 11px; background: #ddd; }
+/** 食谱随心选分类列表1样式 */
+.recipe-food-categories img.food-category-item-image { border: 0; width: 610px; height: 242px; vertical-align: middle; }
+.recipe-food-categories .lable { display: block; height: 66px; line-height: 66px; background: #00B1AF; color: #fff; font-size: 30px; }
+.recipe-food-categories li, .recipe-food-categories .food-category-item { margin: 0; padding: 0; width: 610px; height: 308px; display: block; }
+.recipe-food-categories li { margin: 20px 0 0 15px; }
+/** 食谱随心选分类列表2样式 */
+.recipe-food-categories .food-category-2-item { float: left; width: 300px; margin: 14px 1px 0 13px; padding: 0; }
+.recipe-food-categories .food-category-2-item a { display: block; }
+.recipe-food-categories .food-category-2-item img { width: 300px; height: 242px; vertical-align: middle; }
+.recipe-food-categories .food-category-2-item .lable { background: #AF2026; text-align: center; height: 65px; line-height: 65px; letter-spacing: 15px; }
+/** 食谱随心选分类列表3样式 */
+.recipe-food-categories .food-category-3-item { float: left; position: relative; width: 312px; height: auto; margin: 6px 1px 0 5px; padding: 0; }
+.recipe-food-categories .food-category-3-item a { display: block; }
+.recipe-food-categories .food-category-3-item img { vertical-align: middle; }
+.recipe-food-categories .food-category-3-item .lable-bg { position: absolute; top: 0; left: 0; width: 65px; height: 100%; background: #49BECA; opacity: 0.33; }
+.recipe-food-categories .food-category-3-item .lable { position: absolute; left: 0; bottom: 25px; background: transparent; text-align: center; padding: 0 10px; width: 45px; height: auto; line-height: 40px; text-shadow: 1px 1px 3px #000; }
+.recipe-food-categories .food-category-3-item.item3, 
+.recipe-food-categories .food-category-3-item.item5,
+.recipe-food-categories .food-category-3-item.item7 { margin-top: -140px; }
+/** 食谱随心选分类列表4样式 */
+.recipe-food-categories .food-category-4-item { float: left; margin: 11px 1px 1px 11px; padding: 0; width: auto; height: auto; }
+.recipe-food-categories .food-category-4-item a { display: inline-block; }
+.recipe-food-categories .food-category-4-item img { vertical-align: middle; }
+/** 食谱随心选分类列表5样式 */
+.recipe-food-categories .food-category-5-item { float: left; width: 299px; height: 228px; margin: 15px 1px 0 14px; padding: 0; }
+.recipe-food-categories .food-category-5-item a { display: block; height: 228px; line-height: 228px; background: #96A8B2; text-align: center; color: #fff; font-size: 40px; }
+.recipe-food-categories .food-category-5-item a span { font-size: 120px; }
+/** 食谱随心选分类列表6样式 */
+.recipe-food-categories .food-category-6-item { float: left; width: 304px; height: 412px; margin: 11px 0 0 11px; padding: 0; }
+.recipe-food-categories .food-category-6-item.item1 { background: url('../../images/recipe/shipu/category-6/1.png') no-repeat; }
+.recipe-food-categories .food-category-6-item.item2 { background: url('../../images/recipe/shipu/category-6/2.png') no-repeat; }
+.recipe-food-categories .food-category-6-item.item3 { background: url('../../images/recipe/shipu/category-6/3.png') no-repeat; }
+.recipe-food-categories .food-category-6-item.item4 { background: url('../../images/recipe/shipu/category-6/4.png') no-repeat; }
+.recipe-food-categories .food-category-6-item a { display: block; font-size: 40px; line-height: 50px; padding: 332px 30px 30px 0; text-align: right; color: #fff; text-shadow: 1px 1px 3px #000; }
+/** 食谱随心选分类列表7样式 */
+.recipe-food-categories .food-category-7-item { float: left; position: relative; width: 312px; height: auto; margin: 6px 1px 0 5px; padding: 0; }
+.recipe-food-categories .food-category-7-item a { display: block; }
+.recipe-food-categories .food-category-7-item img { vertical-align: middle; }
+.recipe-food-categories .food-category-7-item .lable-bg { position: absolute; top: 0; right: 0; width: 65px; height: 100%; background: #2C8873; opacity: 0.5; }
+.recipe-food-categories .food-category-7-item .lable { position: absolute; right: 0; bottom: 25px; background: transparent; text-align: center; padding: 0 10px; width: 45px; height: auto; line-height: 40px; text-shadow: 1px 1px 3px #000; }
+.recipe-food-categories .food-category-7-item.item4 { margin-top: -140px; }
+
+/** 食谱随心选菜品列表样式 */
+.recipe-food-list img.food-image { border: 0; width: 610px; height: 422px; vertical-align: middle; }
+.recipe-food-list .lable { left: 0; bottom: 0; display: block; height: 66px; line-height: 66px; background: #00B1AF; color: #fff; font-size: 30px; width:580px; padding-left: 30px; }
+.recipe-food-list li, .recipe-food-list .food-item { margin: 0; padding: 0; width: 610px; height: 422px; display: block; }
+.recipe-food-list li { margin: 20px 0 0 15px; }
+/** 食谱随心选详情页面样式 */
+.food-detail-author { display: inline-block; width: 319px; color: #fff; text-align: center; border-right: 1px solid #fff; }
+.food-detail-content { font-size: 22px; line-height: 36px; }
+.food-detail-content .cut-bottom-line { border-color: #DEDEDE; }
+.food-detail-content p { padding: 5px 35px;color: #333; }
+.food-detail-content .title { font-size: 32px; line-height: 50px; margin: 15px 25px 20px 25px; }
+.food-detail-title { display: block; padding-left: 35px; height: 70px; line-height: 70px; background: #00B1AF; color: #fff; font-size: 36px; font-weight: bold; }
+.food-detail-content .title-cailiao { background: url('../images/recipe/shipu/food-detail-cailiao-icon.png') no-repeat left center; padding-left: 50px; }
+.food-detail-content .title-zuofa { background: url('../images/recipe/shipu/food-detail-zuofa-icon.png') no-repeat left center; padding-left: 50px; }
+
+/** 食谱随心选分类列表3样式 */
+.shipu-find-nav-title { height: 60px; line-height: 60px; background-color: #00B1AF; color: #fff; border-bottom: 1px solid #DBDBDB; } 
+.recipe-find-list li { height: 114px; line-height: 114px; border-bottom: 1px solid #DBDBDB; }
+.recipe-find-list img { margin: 13px; width: 88px; height: 88px; float: left; }
+.recipe-find-list .lable { margin-left: 120px; font-size: 30px; }
+.shipu-find-add-plus { display: block; background: #E9EDEE url('../images/recipe/shipu/food-find-plus-add.png') no-repeat 70px center; padding-left: 20px; height: 90px; line-height: 90px; color: #00B1AF; font-size: 35px; margin: 15px 25px; border-radius: 13px; }
+
+
+.transparent { background: transparent; }

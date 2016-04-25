@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(basic.css);
+
+body,.wrap{ background-color:#3469af; height:100%; overflow:hidden; width:100%; }
+body.page,.page .wrap{ background-color:#FFF;}
+.top{ background-color:#275ca2; border-bottom:1px solid #e3e4e8; height:63px; overflow:hidden; width:100%;}
+.top_auto{ height:63px; margin:0 auto; overflow:hidden; margin-left: 50px;}
+.top_auto a{ background:url(../images/logo.jpg) no-repeat; display:block; height:62px; width:419px;}
+.cont{ overflow:hidden;}
+.login_box{ background:url(../images/login_bg.jpg) no-repeat; height:377px; margin:90px auto 0; overflow:hidden; width:354px;}
+.user_msg{ margin:100px 0 0 75px;}
+.user_msg input{ border:0 none; color:#cccccc; height:45px; *height:43px; line-height:45px; margin-bottom:23px; overflow:hidden; width:230px;}
+.login_box a{ background:url(../images/login_btn.jpg) no-repeat; display:block; height:63px; margin:5px auto 0; width:290px;}
+.login_box a:hover { opacity: 0.75; filter: alpha(opacity=75); }
+
+.page .top{ border-bottom:0 none;}
+.page .cont{ height:100%;}
+.page .content{ height:100%; margin:0 auto; overflow:hidden;}
+.page .menus{ background-color:#325c92; float:left; height:100%; overflow:hidden; padding-top:35px; width:240px;}
+.page .menus a{ border-bottom:1px solid #56769f; display:block; height:37px; line-height:37px; overflow:hidden;}
+.mainMenu{ background:url(../images/btn_1.png) no-repeat 195px 5px; color:#ffffff; font-size:14px; font-weight:bold; padding-left:75px;}
+.mainMenu.up{ background:url(../images/btn_2.png) no-repeat 195px 5px;}
+.mainMenu:hover{ color:#ffffff; text-decoration:none;}
+.subMenus a{ color:#dedede; font-size:14px; padding-left: 94px;}
+.subMenus a:hover{ background-color:#3e75bb; color:#dedede; text-decoration:none;}
+.menus .line{ background-color:#6cccc1; display:block; float:left; height:17px; margin:10px 20px 0 -20px; width:2px;}
+
+.contentWrapper{overflow-y:auto;}
+
+
+/* 2014-6-25, 界面优化，by great.maronghua@gmail.com */
+.contentWrapper { font-size: 12px; }
+.contentWrapper table { border-radius: 3px; width: 96%; border: 1px solid #ddd; }
+.contentWrapper table td, .contentWrapper  table th { border: 1px solid #ddd; padding: 8px; font-size: 12px; border-width: 1px 0 1px 0; }
+.contentWrapper table tr:hover { background: #F3EDE5; }
+.contentWrapper table hr { display: block; padding: 0; margin: 0; height: 8px; background: transparent; border: 0; }
+.contentWrapper a { color: #656565; text-decoration: underline; }
+.contentWrapper a:hover { color: #000; }
+.contentWrapper input, .contentWrapper select, .contentWrapper textarea { border-radius: 3px; height: auto; min-height: 18px; line-height: 18px; background: #fff; padding: 5px 8px; margin: 0; border: 1px solid #ACB4BD; }
+.contentWrapper input[type="button"] { background: #eee; color: #222; cursor: pointer; }
+.contentWrapper input[type="button"]:hover { color: #000; background: #fff; }
+.contentWrapper input.okButton { background: #335C92; color: #fff; border-color: #133E75;  }
+
+
+
+
+
+
+
+
+
+
+
+
